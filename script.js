@@ -8,7 +8,7 @@ $(document).ready(function(){
 		//9166072075b447239abdafc592fb52ab
 		//https://thekencode.github.io
 		
-		var access_token = document.url
+		var access_token = document.URL;
 		for(var i = 0; i < access_token.length; i++){
 			if(access_token.char(i) == '=' && access_token.char(i + 1) >= '0'){
 				access_token = access_token(i + 1, access_token.length());
