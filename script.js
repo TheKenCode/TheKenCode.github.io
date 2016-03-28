@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	console.log(document.URL);
 	if(document.URL != "thekencode.github.io"){
 		$(".link").hide();
 		$("#submit").show();
@@ -11,6 +12,7 @@ $(document).ready(function(){
 		//27292a5037854cd2b819fb12fb114642
 		//9166072075b447239abdafc592fb52ab
 		//https://thekencode.github.io
+		//Should be getting the access token
 		
 		var access_token = document.URL;
 		for(var i = 0; i < access_token.length; i++){
