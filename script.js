@@ -1,4 +1,4 @@
-$(document).ready(fucntion(){
+$(document).ready(function(){
 	$('#submit').click(function(){
 		console.log("clicked");
 		
