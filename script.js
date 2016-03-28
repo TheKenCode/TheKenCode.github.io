@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	
+	window.location.replace("https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&response_type=code");	
 	$('#submit').click(function(){
 		var searchKey = {
 			q: $("#search").val()
@@ -17,10 +17,6 @@ $(document).ready(function(){
 				break;
 			}
 		};
-		
-		if(access_token == document.URL){
-			window.location.replace("https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&response_type=code");	
-		}
 		
 		console.log(access_token);
 		
