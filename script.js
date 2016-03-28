@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	console.log(document.URL);
-	if(document.URL != "thekencode.github.io"){
+	if(document.URL != "http://thekencode.github.io"){
 		$(".link").hide();
 		$("#submit").show();
 	}
