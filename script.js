@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$('#submit').click(function(){
 		var searchKey = {
-			q: $("#search").val();
+			q: $("#search").val()
 		};
 
 		console.log("Searching for " + searchKey);
