@@ -9,7 +9,7 @@ $(document).ready(function(){
 		//https://thekencode.github.io
 		
 		var access_token = document.url
-		for(var i = 0; i < access_token.length(); i++){
+		for(var i = 0; i < access_token.length; i++){
 			if(access_token.char(i) == '=' && access_token.char(i + 1) >= '0'){
 				access_token = access_token(i + 1, access_token.length());
 				break;
