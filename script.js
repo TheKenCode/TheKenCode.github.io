@@ -42,9 +42,10 @@ $(document).ready(function(){
 	});
 	function gettingSearch(search, access_token){
 		$.ajax({
-			url: "https://api.instagram.com/v1/tags/"+ search + "/media/recent?access_token=" + access_token + "&callback=?",
+			url: "https://api.instagram.com/v1/tags/" + search + "?access_token=" + access_token,
 			dataType: 'jsonp',
 			success: function(data){
+				console.log("https://api.instagram.com/v1/tags/" + search + "?access_token=" + access_token);
 				console.log(data);
 				haveKey = false;
 			},
