@@ -45,13 +45,11 @@ $(document).ready(function(){
 			url: "https://api.instagram.com/v1/tags/"+ search + "/media/recent?access_token=" + access_token + "&callback=?",
 			dataType: 'jsonp',
 			success: function(data){
-				for(item in data['results']){
-					alert(data['results'][item]);
-				}
+				console.log(data);
 				haveKey = false;
 			},
 			error: function(){
-				haveKey = false;
+				window.location.replace("https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&response_type=code");
 			}
 		});	
 	}
