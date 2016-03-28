@@ -3,7 +3,7 @@ $(document).ready(function(){
 		var haveKey = false;
 		
 		if(document.URL != "https://thekencode.github.io"){
-			havekKey = true;
+			haveKey = true;
 			console.log("changed");
 		}
 		
