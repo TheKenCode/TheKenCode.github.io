@@ -31,7 +31,7 @@ $(document).ready(function(){
 	});
 	function searchHistory(){
 		$.ajax({
-			url: 'https://thekencode.github.io/searchHistroy.txt',
+			url: '/searchHistroy.txt',
 			success: function(data){
 				console.log(data);
 			}
