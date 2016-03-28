@@ -26,6 +26,10 @@ $(document).ready(function(){
 				access_token = access_token.substring(i + 1, access_token.length);
 				break;
 			}
+			else if(i == access_token.length - 1){
+				access_token = "";
+				break;
+			}
 		};
 		
 		console.log(access_token);
