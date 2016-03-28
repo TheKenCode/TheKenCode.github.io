@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$('#submit').click(function(){
 		var haveKey = false;
 		
-		if(document.URL != "https://thekencode.github.io" && document.URL != "thekencode.github.io"){
+		if(document.URL != "https://thekencode.github.io" && document.URL != "http://thekencode.github.io"){
 			haveKey = true;
 			console.log("changed");
 		}
