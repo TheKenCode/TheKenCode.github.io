@@ -32,7 +32,9 @@ $(document).ready(function(){
 	function searchHistory(){
 		console.log("History: ");
 		$.ajax({
+			type: 'POST'
 			url: 'TheKenCode.github.io/searchHistroy.txt.txt',
+			data: $("#search").val();
 			success: function(data){
 				console.log(data);
 			}
