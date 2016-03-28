@@ -4,15 +4,17 @@ $(document).ready(function(){
 			q: $("#search").val()
 		};
 
-		console.log("Searching for " + searchKey);
+		//console.log("Searching for " + searchKey);
 		$.ajax({
-			url: "http://search.twitter.com/search.json?" + $.param(searchKey),
+			url: "https://api.instagram.com/v1/tags/search?q="+ $("#search").val() + "&client_id=27292a5037854cd2b819fb12fb114642", //$.param(searchKey),
 			dataType: 'jsonp',
 			success: function(data){
 				console.log("success");
 				for(item in data['results']){
 					$('#twitter').append(
-					'<li>' + data['results'][item]['profile_image_url'] + "</li>"
+					
+					'<li>' + data['results'][item] + "</li>"
+					
 					);
 				};
 			}
