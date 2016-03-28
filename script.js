@@ -1,6 +1,9 @@
 $(document).ready(function(){
 	$('#submit').click(function(){
 		var haveKey = false;
+		if(document.URL != "https://thekencode.github.io"){
+			havekKey = true;
+		}
 		console.log(haveKey);
 		
 		if(haveKey == false){
