@@ -26,7 +26,7 @@ $(document).ready(function(){
 		gettingSearch("bowery", access_token);
 		
 	});
-	function gettingSearch(var search, var access_token){
+	function gettingSearch(search, access_token){
 		$.ajax({
 			url: "https://api.instagram.com/v1/tags/search?q="+ search + "&access_token=" + access_token,
 			dataType: 'jsonp',
