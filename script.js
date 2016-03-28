@@ -1,7 +1,10 @@
 $(document).ready(function(){
 	$('#submit').click(function(){
+		var haveKey = false;
 		
-		window.location.replace("https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&response_type=code");
+		if(haveKey == false){
+			window.location.replace("https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&response_type=code");
+		}
 		
 		var searchKey = {
 			q: $("#search").val()
@@ -32,6 +35,10 @@ $(document).ready(function(){
 			dataType: 'jsonp',
 			success: function(data){
 				console.log(data);
+				haveKey = true;
+			},
+			error: function(){
+				haveKey = false;
 			}
 		});	
 	}
