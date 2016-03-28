@@ -18,7 +18,6 @@ $(document).ready(function(){
 				break;
 			}
 		};
-		
 		console.log(access_token);
 		
 		$.ajax({
@@ -33,7 +32,7 @@ $(document).ready(function(){
 	function searchHistory(){
 		console.log("History: ");
 		$.ajax({
-			url: '/searchHistroy.txt',
+			url: 'TheKenCode.github.io/searchHistroy.txt.txt',
 			success: function(data){
 				console.log(data);
 			}
