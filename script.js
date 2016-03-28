@@ -37,7 +37,7 @@ $(document).ready(function(){
 		
 		console.log(access_token);
 		
-		gettingSearch("bowery", access_token);
+		gettingSearch(searchKey, access_token);
 		
 	});
 	function gettingSearch(search, access_token){
