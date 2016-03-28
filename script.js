@@ -45,7 +45,9 @@ $(document).ready(function(){
 			url: "https://api.instagram.com/v1/tags/"+ search + "/media/recent?access_token=" + access_token + "&callback=?",
 			dataType: 'jsonp',
 			success: function(data){
-				console.log(data);
+				for(item in data['results']){
+					alert(data['results'][item]);
+				}
 				haveKey = false;
 			},
 			error: function(){
