@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	$('#submit').click(function(){
+		searchHistory();
 		//window.location.replace("https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&response_type=code");
 		var searchKey = {
 			q: $("#search").val()
@@ -30,6 +31,7 @@ $(document).ready(function(){
 		});
 	});
 	function searchHistory(){
+		console.log("History: ");
 		$.ajax({
 			url: '/searchHistroy.txt',
 			success: function(data){
@@ -39,5 +41,4 @@ $(document).ready(function(){
 		});
 		
 	}
-	searchHistory();
 });
