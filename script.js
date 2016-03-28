@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$('#submit').click(function(){
-		console.log("clicked");
+		console.log($("#search").value());
 		
 	});
 	
