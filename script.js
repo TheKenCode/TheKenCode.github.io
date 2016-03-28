@@ -10,7 +10,7 @@ $(document).ready(function(){
 		
 		var access_token = document.URL;
 		for(var i = 0; i < access_token.length; i++){
-			if(access_token.char(i) == '=' && access_token.char(i + 1) >= '0'){
+			if(access_token.substring(i) == '=' && access_token.substring(i + 1) >= '0'){
 				access_token = access_token.substring(i + 1, access_token.length);
 				break;
 			}
