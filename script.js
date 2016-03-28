@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	if(document.URL != "thekencode.github.io"){
-		$(".link").remove();
+		$(".link").hide();
+		$("#submit").show();
 	}
 	$('#submit').click(function(){
 		var searchKey = {
