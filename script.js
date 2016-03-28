@@ -42,11 +42,11 @@ $(document).ready(function(){
 	});
 	function gettingSearch(search, access_token){
 		$.ajax({
-			url: "https://api.instagram.com/v1/tags/search?q="+ search + "&access_token=" + access_token,
+			url: "https://api.instagram.com/v1/tags/search?q="+ search + "&access_token=" + access_token + "&callback=?",
 			dataType: 'jsonp',
 			success: function(data){
 				console.log(data);
-				haveKey = true;
+				haveKey = false;
 			},
 			error: function(){
 				haveKey = false;
