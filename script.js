@@ -11,10 +11,12 @@ $(document).ready(function(){
 		var access_token = document.URL;
 		for(var i = 0; i < access_token.length; i++){
 			if(access_token.char(i) == '=' && access_token.char(i + 1) >= '0'){
-				access_token = access_token(i + 1, access_token.length());
+				access_token = access_token(i + 1, access_token.length);
 				break;
 			}
 		};
+		
+		console.log(access_token);
 		
 		$.ajax({
 			url: "https://api.instagram.com/v1/tags/search?q="+ $("#search").val() + "&access_token=" + access_token,
