@@ -10,15 +10,13 @@ $(document).ready(function(){
 		console.log(haveKey);
 		
 		if(haveKey == false){
-			window.location.replace("https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&response_type=token");
+			window.location.replace("https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&response_type=code");
 		}
 		
-		var searchKey = {
-			q: $("#search").val()
-		};
+		var searchKey = $("#search").val();
 		
-		//27292a5037854cd2b819fb12fb114642
-		//9166072075b447239abdafc592fb52ab
+		var id = 27292a5037854cd2b819fb12fb114642
+		var secret = 9166072075b447239abdafc592fb52ab
 		//https://thekencode.github.io
 		//Should be getting the access token
 
@@ -37,9 +35,19 @@ $(document).ready(function(){
 		
 		console.log(access_token);
 		
-		gettingSearch(searchKey, access_token);
+		gettingToken(access_token, id, secret, document.URL);
 		
 	});
+	function gettingToken(code, id, secret, uri){
+		$.ajax({
+			url: "https://api.instagram.com/oauth/access_token?client_id=" + id + "&client_secret=" + secret + "&code=" + code + "redirect_uri=" + uri,
+			type: "post",
+			success: function(data){
+				console.log(data);
+			}
+			
+		});
+	}
 	function gettingSearch(search, access_token){
 		$.ajax({
 			url: "https://api.instagram.com/v1/tags/" + search + "?access_token=" + access_token,
