@@ -7,7 +7,7 @@ $(document).ready(function(){
 			haveKey = true;
 			console.log("changed");
 			for(var i = 0; i < document.URL.length; i++){
-				if(document.URL.charAt(i) != '#' && i = document.URL.length - 1){
+				if(document.URL.charAt(i) != '#' && i == document.URL.length - 1){
 					gettingToken("token");
 				}
 			};
