@@ -13,7 +13,7 @@ $(document).ready(function(){
 				}
 			};
 			
-			if(containsToken == true){
+			if(containsToken == false){
 				console.log("Getting Token");
 				gettingToken("token");
 			}
