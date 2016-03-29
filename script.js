@@ -43,11 +43,11 @@ $(document).ready(function(){
 		gettingSearch(searchKey, access_token);
 	});
 	function gettingToken(type){
-		window.location.replace("https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&response_type=" + type);
+		window.location.replace("https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&scope=public_content&response_type=" + type);
 	}
 	function gettingSearch(search, access_token){
 		$.ajax({
-			url: "https://api.instagram.com/v1/tags/" + search + "?access_token=" + access_token,
+			url: "https://api.instagram.com/v1/tags/" + search + "?access_token=" + access_token + "&scope=public_content",
 			dataType: 'jsonp',
 			success: function(data){
 				console.log(data);
