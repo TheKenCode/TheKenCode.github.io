@@ -6,12 +6,17 @@ $(document).ready(function(){
 		if(document.URL != "https://thekencode.github.io/" && document.URL != "http://thekencode.github.io/"){
 			haveKey = true;
 			console.log("changed");
+			var containsToken = false;
 			for(var i = 0; i < document.URL.length; i++){
-				if(document.URL.charAt(i) != '#' && i == document.URL.length - 1){
-					console.log("Getting Token");
-					gettingToken("token");
+				if(document.URL.charAt(i) == '#'){
+					containsToken = true;
 				}
 			};
+			
+			if(containsToken == true){
+				console.log("Getting Token");
+				gettingToken("token");
+			}
 		}
 		
 		if(haveKey == false){
