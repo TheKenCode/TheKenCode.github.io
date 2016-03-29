@@ -42,6 +42,8 @@ $(document).ready(function(){
 		$.ajax({
 			url: "https://api.instagram.com/oauth/authorize/?client_id=" + id + "&redirect_uri=" + uri + "&response_type=token",
 			type: "post",
+			crossDomain: true,
+			dataType: 'jsonp',
 			success: function(data){
 				console.log(data);
 			}
