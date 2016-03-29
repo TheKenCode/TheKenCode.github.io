@@ -49,7 +49,7 @@ $(document).ready(function(){
 	}
 	function gettingSearch(search, access_token){
 		$.ajax({
-			url: "https://api.instagram.com/v1/tags/" + search + "/media/recent?access_token=" + access_token + "&scope=public_content",
+			url: "https://api.instagram.com/v1/tags/" + search + "/media/recent?access_token=" + access_token + "&scope=public_content&count=15",
 			dataType: 'jsonp',
 			success: function(data){
 				console.log(data);
