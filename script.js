@@ -15,8 +15,8 @@ $(document).ready(function(){
 		
 		var searchKey = $("#search").val();
 		
-		var id = 27292a5037854cd2b819fb12fb114642;
-		var secret = 9166072075b447239abdafc592fb52ab;
+		var id = "27292a5037854cd2b819fb12fb114642";
+		var secret = "9166072075b447239abdafc592fb52ab";
 		//https://thekencode.github.io
 		//Should be getting the access token
 
