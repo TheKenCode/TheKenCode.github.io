@@ -2,23 +2,22 @@ $(document).ready(function(){
 	var haveKey = false;
 	$('#submit').click(function(){
 		haveKey =  false;
+		
 		if(document.URL != "https://thekencode.github.io/" && document.URL != "http://thekencode.github.io/"){
 			haveKey = true;
 			console.log("changed");
+			for(var i = 0; i < document.URL.length; i++){
+				if(document.URL.charAt(i) != '#' && i = document.URL.length - 1){
+					gettingToken("token");
+				}
+			};
 		}
 		
-		console.log(haveKey);
-		
 		if(haveKey == false){
-			window.location.replace("https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&response_type=code");
+			gettingToken("code");
 		}
 		
 		var searchKey = $("#search").val();
-		
-		var id = "27292a5037854cd2b819fb12fb114642";
-		var secret = "9166072075b447239abdafc592fb52ab";
-		//https://thekencode.github.io
-		//Should be getting the access token
 
 		var access_token = document.URL;
 		
@@ -34,29 +33,15 @@ $(document).ready(function(){
 		};
 		
 		console.log(access_token);
-		
-		gettingToken(access_token, id, document.URL);
-		
 	});
-	function gettingToken(code, id, uri){
-		$.ajax({
-			url: "https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&response_type=token",
-			type: "post",
-			crossDomain: true,
-			dataType: 'jsonp',
-			success: function(data){
-				console.log(data);
-				haveKey = false;
-			}
-			
-		});
+	function gettingToken(type){
+		window.location.replace("https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&response_type=" + type);
 	}
 	function gettingSearch(search, access_token){
 		$.ajax({
 			url: "https://api.instagram.com/v1/tags/" + search + "?access_token=" + access_token,
 			dataType: 'jsonp',
 			success: function(data){
-				console.log("https://api.instagram.com/v1/tags/" + search + "?access_token=" + access_token);
 				console.log(data);
 				haveKey = false;
 			},
