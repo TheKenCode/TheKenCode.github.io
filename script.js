@@ -35,10 +35,10 @@ $(document).ready(function(){
 		
 		console.log(access_token);
 		
-		gettingToken(access_token, id, secret, document.URL);
+		gettingToken(access_token, id, document.URL);
 		
 	});
-	function gettingToken(code, id, secret, uri){
+	function gettingToken(code, id, uri){
 		$.ajax({
 			url: "https://api.instagram.com/oauth/authorize/?client_id=" + id + "&redirect_uri=" + uri + "&response_type=token",
 			type: "post",
