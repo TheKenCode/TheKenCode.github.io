@@ -40,7 +40,7 @@ $(document).ready(function(){
 	});
 	function gettingToken(code, id, uri){
 		$.ajax({
-			url: "https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=" + uri + "&response_type=token",
+			url: "https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&response_type=token",
 			type: "post",
 			crossDomain: true,
 			dataType: 'jsonp',
