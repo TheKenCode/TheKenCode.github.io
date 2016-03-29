@@ -40,7 +40,7 @@ $(document).ready(function(){
 	});
 	function gettingToken(code, id, secret, uri){
 		$.ajax({
-			url: "https://api.instagram.com/oauth/access_token?client_id=" + id + "&client_secret=" + secret + "&code=" + code + "redirect_uri=" + uri,
+			url: "https://api.instagram.com/oauth/authorize/?client_id=" + id + "&redirect_uri=" + uri + "&response_type=token",
 			type: "post",
 			success: function(data){
 				console.log(data);
