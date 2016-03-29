@@ -1,7 +1,7 @@
 $(document).ready(function(){
+	var haveKey = false;
 	$('#submit').click(function(){
-		var haveKey = false;
-		
+		haveKey =  false;
 		if(document.URL != "https://thekencode.github.io/" && document.URL != "http://thekencode.github.io/"){
 			haveKey = true;
 			console.log("changed");
@@ -46,6 +46,7 @@ $(document).ready(function(){
 			dataType: 'jsonp',
 			success: function(data){
 				console.log(data);
+				haveKey = false;
 			}
 			
 		});
