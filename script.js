@@ -40,6 +40,7 @@ $(document).ready(function(){
 		};
 		
 		console.log(access_token);
+		gettingSearch(searchKey, access_token);
 	});
 	function gettingToken(type){
 		window.location.replace("https://api.instagram.com/oauth/authorize/?client_id=27292a5037854cd2b819fb12fb114642&redirect_uri=https://thekencode.github.io&response_type=" + type);
