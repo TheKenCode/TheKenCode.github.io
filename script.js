@@ -8,12 +8,14 @@ $(document).ready(function(){
 			console.log("changed");
 			for(var i = 0; i < document.URL.length; i++){
 				if(document.URL.charAt(i) != '#' && i == document.URL.length - 1){
+					console.log("Getting Token");
 					gettingToken("token");
 				}
 			};
 		}
 		
 		if(haveKey == false){
+			console.log("Getting Code");
 			gettingToken("code");
 		}
 		
