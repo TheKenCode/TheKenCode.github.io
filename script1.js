@@ -23,7 +23,7 @@ $(document).ready(function(){
 			+ timeStamp 
 			+ '&Signature='
 			+ signature,
-			dataType: 'jsonp',
+			dataType: 'xml',
 			crossDomain: true,
 			success: function(data){
 				console.log(data);
