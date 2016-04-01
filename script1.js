@@ -39,7 +39,8 @@ $(document).ready(function(){
 				searchWord = searchWord + array[i] + "%20";
 			}
 		};
-		return searchWord;
+		word.replace(" ", "%20");
+		return word;
 	};
 	
 	
