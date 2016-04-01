@@ -24,6 +24,7 @@ $(document).ready(function(){
 			+ '&Signature='
 			+ signature,
 			dataType: 'xml',
+			crossDomain: true,
 			success: function(data){
 				console.log(data);
 			}
