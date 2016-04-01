@@ -24,7 +24,7 @@ $(document).ready(function(){
 			dataType: 'jsonp',
 			success: function(data){
 				console.log(data);
-			};
+			}
 		});
 	}
 	function keyWord(word){
