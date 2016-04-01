@@ -2,6 +2,7 @@ $(document).ready(function(){
 	var Search = "The Hunger Games";
 	var index = "Books";
 	var stamp = new Date().getTime();
+	console.log(stamp);
 	ajaxRequest(keyWord(Search), index, stamp, "");
 	
 	function ajaxRequest(search, searchIndex, timeStamp, signature){
@@ -22,7 +23,7 @@ $(document).ready(function(){
 			+ timeStamp 
 			+ '&Signature='
 			+ signature,
-			dataType: 'jsonp',
+			dataType: 'xml',
 			success: function(data){
 				console.log(data);
 			}
