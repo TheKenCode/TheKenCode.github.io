@@ -17,7 +17,7 @@ $(document).ready(function(){
 			+ '&Operation=ItemSearch&Keywords='
 			+ search
 			+ '&SearchIndex='
-			+ searchIndex,
+			+ searchIndex
 			+ '&Timestamp='
 			+ timeStamp 
 			+ '&Signature='
