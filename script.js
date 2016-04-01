@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	var haveKey = false;
-	gettingCodeAndToken();
+	//gettingCodeAndToken();
 	$('#submit').click(function(){
 		haveKey =  false;
 		
