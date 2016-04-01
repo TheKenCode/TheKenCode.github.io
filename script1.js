@@ -1,7 +1,8 @@
 $(document).ready(function(){
 	var Search = "The Hunger Games";
 	var index = "Books";
-	ajaxRequest(keyWord(Search), index, "", "");
+	var stamp = new Date().getTime();
+	ajaxRequest(keyWord(Search), index, stamp, "");
 	
 	function ajaxRequest(search, searchIndex, timeStamp, signature){
 		var accessId = 'AKIAJPQSAOBBHUQRL5AQ';
@@ -17,10 +18,10 @@ $(document).ready(function(){
 			+ search
 			+ '&SearchIndex='
 			+ searchIndex,
-			//+ '&Timestamp='
-			//+ timeStamp 
-			//+ '&Signature='
-			//+ signature,
+			+ '&Timestamp='
+			+ timeStamp 
+			+ '&Signature='
+			+ signature,
 			dataType: 'jsonp',
 			success: function(data){
 				console.log(data);
