@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	var Search = "The Hunger Games";
 	var index = "Books";
-	var stamp = new Date();
+	var stamp = new Date().getDate();
 	console.log(stamp);
 	ajaxRequest(keyWord(Search), index, stamp, "");
 	
