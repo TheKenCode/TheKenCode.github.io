@@ -10,7 +10,7 @@ $(document).ready(function(){
 		
 		
 		$.ajax({
-			url: 'http://webservices.amazon.com/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=' 
+			url: 'https://webservices.amazon.com/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=' 
 			+ accessId 
 			+ '&AssociateTag=' 
 			+ associateId
