@@ -22,7 +22,8 @@ $(document).ready(function(){
 			+ '&Timestamp='
 			+ timeStamp 
 			+ '&Signature='
-			+ signature,
+			+ signature
+			+ '&callback=?',
 			dataType: 'xml',
 			type: 'GET',
 			crossDomain: true,
